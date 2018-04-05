@@ -1,0 +1,161 @@
+body { height: 100%; width: 100%; margin: 0px; font-family: 'Roboto'; background: #F6F6F6; }
+
+html { height: 100%; }
+
+* { margin: 0; padding: 0; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+a { text-decoration: none; }
+
+.container{
+    width: 60%;
+    margin: 0 20%;
+    padding: 0px 50px;
+}
+
+.top__btns{
+    width: 100%;
+    padding:0px;
+    padding-top: 20px;
+    /* background: firebrick; */
+    overflow: hidden;
+}
+.file-upload {
+    overflow: hidden;
+    float: left;
+    width: 100px;
+    margin: 0 10px;
+    background: #0893d2;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+.file-upload:hover {
+    background: #0786c0;
+}
+.file-upload input[type="file"]{
+   display: none;
+}
+.file-upload label {
+
+    padding: 10px 30px;
+    /* width: 100%; */
+    cursor: pointer;
+}
+.file-upload span {
+    line-height: 38px; 
+}
+
+.preview__btn{
+    float: left;
+    width: 100px;
+    font-size: 16px;
+    background: #0893d2;
+    border-radius: 25px;
+    margin: 0 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none;
+    
+}
+.preview__btn:hover {
+    background: #0786c0;
+}
+
+.download__btn{
+    float: left;
+    width: 100px;
+    background: #0893d2;
+    border-radius: 25px;
+    margin: 0 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+.img__block{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.img__block .img__canvas{
+    width: 100%;
+    padding: 0px 50px;
+}
+#canvas__preview{
+    width: 100%;
+    padding: 25px;
+}
+
+
+.display__none{
+    display: none;
+}
+.img__block .upload__img #canvas{
+    width: 100%;
+    height: 100%;
+}
+
+.cut__btn{
+    width: 150px;
+    height: 50px;
+    border: 2px solid firebrick;
+    background: #fff;
+    color: darkslategray;
+    cursor: pointer;
+}
+
+
+.preview__block{
+    background: #fff;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hidden__canvas{
+    display: none;
+}
+
+.back__btn{
+    float: left;
+    width: 165px;
+    font-size: 16px;
+    background: #0893d2;
+    border-radius: 25px;
+    margin: 0 10px;
+    /* margin-top: 20px; */
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+.download__btn--block{
+    margin-top: 20px;
+}
+.hidden__canvas{
+    display: none;
+}
+
+@media screen and (max-width : 769px){
+    .container{
+        width: 90%;
+        margin: 0 5%;
+        overflow: hidden;
+        padding: 0px 15px;
+    }
+    .img__block .img__canvas{
+        padding: 0px 15px;
+    }
+}
