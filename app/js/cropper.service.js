@@ -1,24 +1,17 @@
 cropperApp.factory('cropperService', function () {
 
-
+    function getResponders(output) {    
+        return output;
+    }
     return {
-        init() {
-            var addNewImgBtn = document.getElementById('add__new--img');// button for upload new file
-
-            var canvas = document.getElementById('canvas');
-            var canvasPreview = document.getElementById('canvas__preview');
-            var hiddenCanvas = document.getElementById('hidden__canvas');
+        
+        init(canvas, canvasPreview, hiddenCanvas, addNewImgBtn) {
+            var self = this;
+            
 
             var ctx = canvas.getContext('2d');
             var ctxPr = canvasPreview.getContext('2d');
             var ctxHidCan = hiddenCanvas.getContext('2d');
-
-            var cutButton = document.getElementById('preview__btn');
-
-            document.querySelector('.back__btn').addEventListener('click', function () {
-                document.querySelector('.preview__block').style.display = 'none';
-            })
-
             var canvasImgPath; // new img path for canvas
             var startPointX = 0; // start canvas position X
             var startPointY = 0; // start canvas position Y
@@ -63,7 +56,15 @@ cropperApp.factory('cropperService', function () {
 
             var imageName;
 
-            cutButton.addEventListener('click', cutImage);
+            var cutButton = document.getElementById('preview__btn');
+
+            document.querySelector('.back__btn').addEventListener('click', function () {
+                document.querySelector('.preview__block').style.display = 'none';
+            })
+
+            
+
+            // cutButton.addEventListener('click', cutImage);
 
 
             addNewImgBtn.addEventListener("change", downloadNewImg);
@@ -554,6 +555,8 @@ cropperApp.factory('cropperService', function () {
                                 document.getElementById('prev__cut__image__url').setAttribute('href', prUrl);
                                 document.getElementById('prev__cut__image__url').download = imageName;
                                 onLoadBool = true;
+                               
+                                getResponders(prUrl);
                             }
 
                         }
@@ -572,6 +575,7 @@ cropperApp.factory('cropperService', function () {
 
 
                 }
+                
                 previewDataImage.src = prDataUrl;
                 ctx.restore();
 
