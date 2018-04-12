@@ -2,11 +2,11 @@
     <div class="container">
         <div class="file-upload">
             <label>
-                <input type="file" name="file" class="add__new--img" ng-model="tet" ng-change="uploadNewFile()">
+                <input type="file" name="file" class="add__new--img">
                 <span>File</span>
             </label>
         </div>
-        <button class="preview__btn" id="preview__btn" disabled ng-click="cutImage()">Preview</button>
+        <button class="preview__btn" id="preview__btn" ng-click="cutImage()">Preview</button>
     </div>
 </div>
 
@@ -24,23 +24,15 @@
 <section class="preview__block">
     <div class="container">
         <div class="close__btn">
-            <button class="back__btn">
+            <button class="back__btn" ng-click="backToChange()">
                 Back to changes
             </button>
         </div>
         <div class="btn download__btn--block">
-            <a href=" " class="download__btn " id="prev__cut__image__url" download>Download</a>
+            <a href=" " class="download__btn" id="prev__cut__image__url" ng-click="sendRequest()" download>Download</a>
         </div>
         <canvas id="canvas__preview" class="canvas__preview">
             Your browser does not support the canvas element.
         </canvas>
     </div>
 </section>
-
-<div class="hidden__canvas--section">
-    <div class="container">
-        <canvas id="hidden__canvas" class="hidden__canvas">
-            Your browser does not support the canvas element.
-        </canvas>
-    </div>
-</div>
