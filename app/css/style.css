@@ -115,7 +115,8 @@ a { text-decoration: none; }
 
 .preview__block{
     background: #fff;
-    position: absolute;
+    position: fixed;
+    overflow-x: hidden;
     display: none;
     top: 0;
     left: 0;
