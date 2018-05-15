@@ -21,6 +21,9 @@ cropperApp.directive('cropper', function cropperFactory(cropperFactory) {
             $scope.backToChange = function () {
                 croper.backToChangeFoo(croper.previewBlock);
             }
+            $scope.sendRequest = function(){
+                croper.sendRequest();
+            }
 
             $scope.cutImage = function () {
                 let downlBtn = $element[0].querySelector('.download__btn');

@@ -13,7 +13,7 @@
 <section class="img__block">
     <div class="container">
         <div class="img__canvas" id='test_id'>
-            <img src=" " alt="" id="upload__img">
+            <img src="" alt="" id="upload__img">
             <canvas class="canvas" id="canvas">
                 Your browser does not support the canvas element.
             </canvas>
@@ -28,8 +28,11 @@
                 Back to changes
             </button>
         </div>
-        <div class="btn download__btn--block">
-            <a href=" " class="download__btn" id="prev__cut__image__url" ng-click="sendRequest()" download>Download</a>
+        <!-- <div class="btn download__btn--block" >
+            <a href=" " class="download__btn" id="prev__cut__image__url">Download</a>
+        </div> -->
+        <div class="btn download__btn--block" >
+            <a class="download__btn" ng-click="sendRequest()">Download</a>
         </div>
         <canvas id="canvas__preview" class="canvas__preview">
             Your browser does not support the canvas element.
