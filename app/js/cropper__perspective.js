@@ -2,7 +2,7 @@ cropperApp.directive('cropper', function cropperFactory(cropperFactory) {
 
     return {
         restrict: 'E',
-        templateUrl: '../app/js/cropper.tpl.html',
+        templateUrl: '/app/js/cropper.tpl.html',
         transclude: true,
         scope: {
             ghMode: '@'
